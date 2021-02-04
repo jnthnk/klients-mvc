@@ -10,22 +10,13 @@ use app\core\App;
 
 // 
 
-$app = new App();
+$app = new App(dirname(__DIR__));
 
 
 // 
 
-$app->router->get('/', function(){
-  
-  echo 'Hello World!';
-  
-});
-
-$app->router->get('/clients', function(){
-  
-  echo 'Hello Clients!';
-  
-});
+$app->router->get('/', 'dashboard');
+$app->router->get('/clients', 'client');
 
 
 // 

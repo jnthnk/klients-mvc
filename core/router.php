@@ -57,7 +57,15 @@ class Router {
   
   public function renderView($view) {
     
+    $layout = $this->getViewLayout();
     
+  }
+  
+  // 
+  
+  protected function getViewLayout() {
+    
+    include_once App::$ROOT_DIR . '/views/layouts/base.php';
     
   }
   
