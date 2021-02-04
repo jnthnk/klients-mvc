@@ -42,11 +42,22 @@ class Router {
     $func = $this->routes[$method][$path] ?? null;
     
     if (!$func) {
-      echo 'Not found';
-      return;
+      return 'Not found';
     }
     
-    call_user_func($func);
+    if (is_string($func)) {
+      return $this->renderView($func);
+    }
+    
+    return call_user_func($func);
+    
+  }
+  
+  // 
+  
+  public function renderView($view) {
+    
+    
     
   }
   
