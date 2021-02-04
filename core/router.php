@@ -68,7 +68,11 @@ class Router {
   
   protected function getViewContent($view) {
     
+    ob_start();
+    
     include_once App::$ROOT_DIR . "/views/$view.php";
+    
+    ob_clean();
     
   }
   
