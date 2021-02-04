@@ -8,7 +8,7 @@
   </head>
   <body>
     <main class="wrap">
-      {{ content }}
+      {{content}}
     </main>
     <footer class="copyright">
       <p class="text is-small">Lorem ipsum dolor sit</p>
