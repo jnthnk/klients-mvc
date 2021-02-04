@@ -11,11 +11,25 @@ class Router {
     'post' => [],
   ];
   
+  public Request $request;
+  
+  public function __construct($request) {
+    
+    $this->request = $request;
+    
+  }
+  
   public function get($path, $func) {
     
     $this->routes['get'][$path] = $func;
     
   } 
+  
+  public function resolve() {
+    
+    $this->request->getPath();
+    
+  }
   
 }
 
