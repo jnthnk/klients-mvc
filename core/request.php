@@ -6,19 +6,23 @@ namespace app\core;
 
 class Request {
   
+  // 
+  
   public function getPath() {
     
     $path = $_SERVER['REQUEST_URI'] ?? '/';
     
-    if (strpos($path, '?') !== false) {
-      
-      
-      
+    $index = strpos($path, '?');
+    
+    if ($index !== false) {
+      $path = substr($path, 0, $index);
     }
     
-    echo 'Hello World';
+    return $path;
     
   }
+  
+  // 
   
   public function getMethod() {
     
