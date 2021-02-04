@@ -1,0 +1,16 @@
+{
+  "name": "jnthn/klients-mvc",
+  "description": "Project",
+  "authors": [
+    {
+      "name": "Jonathan Kim",
+      "email": "jnthnk@outlook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "require": {}
+}
